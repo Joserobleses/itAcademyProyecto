@@ -70,6 +70,9 @@
             <td>La posición es : </td><td>@isset($fuera_cuadro) @if($fuera_cuadro=="ERROR, ROVER FUERA DE CUADRO") <p class="alert alert-danger" role="alert"> {{ $fuera_cuadro }} </p> @else <p class="alert alert-success" role="alert"> {{ $fuera_cuadro }} </p> @endif @endisset</td><td></td><td></td>
         </tr>
         <tr>
+            <td>Posiciones : </td><td>@isset($acumula_orientacion_posicion_final) {{$acumula_orientacion_posicion_final}} @endisset  @isset($posicion_final) [ {{ $posicion_final }} ] @endisset @isset($orientacion_final) {{ $orientacion_final }} @endisset /// </td><td></td><td></td>
+        </tr>
+        <tr>
             <td><a href="{{ url('/') }}" class="btn btn-primary">Nuevas ordenes</a></td>
         </tr>
       </table>
@@ -131,7 +134,7 @@
             id="orientacion_salida"
             class="form-control" style="width:50px"
             name="orientacion_salida"
-            maxlength="1"
+            maxlength="5"
     >
     <br><br>
     <label>Ordenes :</label>
